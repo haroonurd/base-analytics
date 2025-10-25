@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "4000:4000"
+    environment:
+      - BASESCAN_KEY=${BASESCAN_KEY}
+      - COINGECKO_PLATFORM=${COINGECKO_PLATFORM:-base}
+    volumes:
+      - ./backend/cache.db:/app/cache.db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    environment:
+      - REACT_APP_API_URL=http://localhost:4000
