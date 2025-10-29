@@ -2,7 +2,7 @@
 
 This repository contains a **backend** (Node.js/Express) and a **frontend** (React) starter project to analyze Base chain meme coins and wallets, with charts for volume and wallet analytics.
 
-## Features
+## Features 
 - Fetch top meme coins (CoinGecko) with sparkline and 24h/7d/30d changes
 - Fetch recent transactions for a wallet (BaseScan)
 - Compute wallet token balances from tokentx (BaseScan) and approximate USD values using CoinGecko price data
